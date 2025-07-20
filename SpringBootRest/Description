@@ -1,0 +1,85 @@
+  Online Product Ordering and Cancelling System
+
+Overview:
+This project provides an API-based solution for managing product orders. Users can:
+- Place new orders
+- Cancel existing orders
+- View all orders
+The system ensures simplicity and scalability for backend order processing using standard REST principles
+and JPA for persistence.
+
+Features:
+- Place a product order
+- Cancel an existing order
+- View all placed and cancelled orders
+- Data persistence using Spring Data JPA and H2/MySQL
+- Simple and clean architecture using layered Spring Boot approach
+
+Project Structure:
+SringBootRest/
+  :controller/ # REST Controllers (OrderController)
+  :entity/ # JPA Entities (Order)
+  :repository/ # Spring Data JPA Repository
+  :service/ # Business Logic Layer (OrderService)
+resources/
+ :application.properties
+ :SringBootRestApplication.java
+
+Tech Stack:
+Backend : Spring Boot
+ORM : Spring Data JPA, Hibernate
+Database : H2 (in-memory) / MySQL
+API Testing : Postman
+Build Tool : Maven
+Language : Java
+
+API Endpoints:
+Method | Endpoint | Description
+------ | ----------------------|-------------
+POST | /orders/place | Place a new order
+PUT | /orders/cancel/{id} | Cancel an order by ID
+GET | /orders | View all orders
+
+Sample Request: Place Order
+POST /orders/place
+Content-Type: application/json
+{
+ "productName": "Smartphone",
+ "quantity": 2
+}
+
+Sample Request: Cancel Order
+PUT /orders/cancel/1
+
+Sample Response: Get All Orders
+[
+ {
+ "id": 1,
+ "productName": "Smartphone",
+ "quantity": 2,
+ "status": "PLACED"
+ },
+ {
+ "id": 2,
+ "productName": "Laptop",
+ "quantity": 1,
+ "status": "CANCELLED"
+ }
+]
+
+How to Run:
+1. Clone the repository:
+ git clone https://github.com/yourusername/SringBootRest.git
+2. Navigate to the project directory:
+ cd SringBootRest
+3. Build and run the application:
+ mvn spring-boot:run
+4. Test endpoints using Postman or any REST client.
+
+Author
+Zaiba Khanum G N
+Java Full Stack Developer | Spring Boot | MySQL | REST APIs
+
+Note:
+This project is meant for educational and learning purposes to demonstrate basic Spring Boot RESTful API
+design and backend functionality.

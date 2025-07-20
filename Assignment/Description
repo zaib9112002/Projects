@@ -1,41 +1,80 @@
-Online Quiz Management System using SpringBoot ( Folder named as Assignment )
+Online Quiz Management System
+A full-featured Spring Boot-based backend system that allows users to take quizzes composed of multiple-choice questions. It also includes an admin panel for managing quizzes and questions.
 
-Project Overview:
-The Online Quiz Management System allows users to participate in quizzes with multiple questions. Each quiz consists of multiple questions, and the system supports functionalities like creating quizzes, adding questions, and retrieving quiz details.
+📌 Overview
+The Online Quiz Management System enables users to participate in quizzes containing multiple-choice questions. The platform provides full administrative control for managing quizzes and questions while also allowing participants to attempt quizzes and receive instant evaluations.
 
-Entities and Relationships:
-Questions Model: Represents individual quiz questions, including fields like id, questionText, options, and correctAnswer.
-Quiz Model: Represents a quiz that groups multiple questions. Contains fields like id, title, description, and a list of associated questions.
-Mapping: A One-to-Many relationship is established, where a quiz can have multiple questions.
+🔑 Features
+✅ Create quizzes and associate multiple questions
 
-Key Functionalities:
-Create Quiz: Add a quiz with multiple questions.
-Retrieve Quiz Details: Fetch quizzes along with their associated questions.
-Evaluate Quiz: Allow users to submit answers and receive scores.
-Admin Panel: Manage questions and quizzes.
+✅ Add, update, or delete quiz questions
 
+✅ Attempt quizzes and receive scores based on correct answers
 
+✅ Retrieve quiz details with all associated questions
 
-Technologies Used:
-Backend: Spring Boot, Spring Data JPA, Hibernate.
-Database: MySQL.
-Testing: Postman for API testing.
-Dependencies: Spring Boot Starter Web, Spring Boot Starter JPA/ Mysql connector.
+✅ Admin panel for secure quiz and question management
 
+🗂️ Entities and Relationships
+Quiz
+Fields: id, title, description, List<Question> questions
 
-To-Do List Web Application (Spring Boot Project)
-Developed a To-Do List Web Application using Spring Boot, designed to manage tasks efficiently with CRUD (Create, Read, Update, Delete) functionality.
-Key Features:
-User Authentication: Secure login and registration system.
-Task Management: Add, edit, mark as complete, and delete tasks.
-Categorization: Organize tasks by priority and due dates.
-RESTful API Integration: Exposed endpoints for task management.
-Database Handling: Used Hibernate with MySQL for data persistence.
-Front-end Integration: Integrated with Thymeleaf and Bootstrap for a user-friendly interface.
-Tech Stack:
-Backend: Spring Boot, Spring MVC, Spring Data JPA
-Frontend: HTML, CSS, Bootstrap, Thymeleaf
-Database: MySQL
-Version Control: GitHub
-Outcome:
-Enhanced productivity by providing users with a simple and intuitive platform to manage daily tasks effectively.
+Question
+Fields: id, questionText, options[], correctAnswer
+
+Relationship:
+One Quiz has many Questions (One-to-Many relationship)
+
+🛠️ Tech Stack
+Layer	Technology
+Backend	Spring Boot, Spring Data JPA
+ORM	Hibernate
+Database	MySQL
+API Testing	Postman
+Build Tool	Maven
+Language	Java
+
+📥 API Functionalities
+Create Quiz with a list of questions
+
+Add/Edit/Delete individual questions
+
+Retrieve Quiz Details (including all questions)
+
+Evaluate Quiz based on submitted answers
+
+Admin APIs for managing quizzes and questions
+
+📚 How to Run
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/OnlineQuizSystem.git
+Navigate to the project directory:
+
+bash
+Copy
+Edit
+cd OnlineQuizSystem
+Configure your MySQL database in application.properties:
+
+properties
+Copy
+Edit
+spring.datasource.url=jdbc:mysql://localhost:3306/quizdb
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+Build and run the application:
+
+bash
+Copy
+Edit
+mvn spring-boot:run
+Test the API endpoints using Postman or any REST client.
+
+✍️ Author
+Zaiba Khanum G N
+Java Full Stack Developer | Spring Boot | MySQL | REST APIs
+

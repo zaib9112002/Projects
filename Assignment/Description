@@ -6,13 +6,9 @@ The Online Quiz Management System enables users to participate in quizzes contai
 
 🔑 Features
 ✅ Create quizzes and associate multiple questions
-
 ✅ Add, update, or delete quiz questions
-
 ✅ Attempt quizzes and receive scores based on correct answers
-
 ✅ Retrieve quiz details with all associated questions
-
 ✅ Admin panel for secure quiz and question management
 
 🗂️ Entities and Relationships
@@ -36,41 +32,24 @@ Language	Java
 
 📥 API Functionalities
 Create Quiz with a list of questions
-
 Add/Edit/Delete individual questions
-
 Retrieve Quiz Details (including all questions)
-
 Evaluate Quiz based on submitted answers
-
 Admin APIs for managing quizzes and questions
 
 📚 How to Run
 Clone the repository:
-
-bash
-Copy
-Edit
 git clone https://github.com/yourusername/OnlineQuizSystem.git
 Navigate to the project directory:
-
-bash
-Copy
-Edit
 cd OnlineQuizSystem
 Configure your MySQL database in application.properties:
 
 properties
-Copy
-Edit
 spring.datasource.url=jdbc:mysql://localhost:3306/quizdb
 spring.datasource.username=root
 spring.datasource.password=yourpassword
-Build and run the application:
 
-bash
-Copy
-Edit
+Build and run the application:
 mvn spring-boot:run
 Test the API endpoints using Postman or any REST client.
 
